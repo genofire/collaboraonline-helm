@@ -35,7 +35,8 @@ How to test this specific setup:
   5. Install helm-chart using below command (with a new namespace collabora)
 
       ```bash
-      helm install --create-namespace --namespace colloabora collabora-online ./kubernetes/helm/collabora-online/ -f my_values.yml
+      helm repo add collabora https://genofire.github.io/collaboraonline-helm/
+      helm install --create-namespace --namespace collabora collabora-online collabora/collabora-online -f my_values.yml
       ```
 
   6. Finally spin the collabora-online in kubernetes
