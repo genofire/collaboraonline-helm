@@ -3,6 +3,38 @@ entries:
   collabora-online:
   - apiVersion: v2
     appVersion: 22.05.8.4.1
+    created: "2022-12-06T18:41:08.087274892Z"
+    description: Collabora Online helm chart
+    digest: b488b7b52eba2c676a09910ff2fd259561fc6f0dbdfb3c738fa15901d058a96d
+    home: https://www.collaboraoffice.com/code/
+    icon: https://avatars0.githubusercontent.com/u/22418908?s=200&v=4
+    keywords:
+    - collabora-online
+    - collabora
+    - code
+    - nextcloud
+    - office
+    maintainers:
+    - email: k.erber@erber-freelance.de
+      name: Klaus Erber
+      url: https://www.erber-freelance.de/
+    - email: martin.mueller@dataport.de
+      name: Martin Müller
+      url: https://dphoenixsuite.de
+    - email: geno+dev@fireorbit.de
+      name: Geno
+      url: https://fireorbit.de
+    name: collabora-online
+    sources:
+    - https://github.com/CollaboraOnline/online
+    - https://github.com/CollaboraOnline/online/tree/master/docker
+    - https://github.com/CollaboraOnline/online/tree/master/kubernetes/helm/collabora-online
+    type: application
+    urls:
+    - https://github.com/genofire/collaboraonline-helm/releases/download/collabora-online-1.0.3/collabora-online-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v2
+    appVersion: 22.05.8.4.1
     created: "2022-12-01T18:59:23.603616129Z"
     description: Collabora Online helm chart
     digest: c1b020d6185d26280a947b3ed67a1d03f2fcfdd553903f60645c703634895eac
@@ -65,4 +97,4 @@ entries:
     urls:
     - https://github.com/genofire/collaboraonline-helm/releases/download/collabora-online-1.0.1/collabora-online-1.0.1.tgz
     version: 1.0.1
-generated: "2022-12-01T18:59:23.603623629Z"
+generated: "2022-12-06T18:41:08.087295992Z"
