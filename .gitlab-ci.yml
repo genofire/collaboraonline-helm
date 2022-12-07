@@ -1,0 +1,7 @@
+---
+include:
+  - project: phoenix/devops/ops/default-pipelines
+    ref: main
+    file:
+      - helm.yml
+
