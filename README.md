@@ -34,6 +34,7 @@ How to test this specific setup:
 
         image:
           tag: "latest"
+          pullPolicy: Always
       ```
 
       Important notes:
