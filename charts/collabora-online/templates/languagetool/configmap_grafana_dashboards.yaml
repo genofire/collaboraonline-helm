@@ -1,5 +1,5 @@
-{{- if .Values.grafana.dashboards.enabled }}
-{{- range $path, $bytes := .Files.Glob "grafana_dashboards/*.json" }}
+{{- if and .Values.languagetool.enabled .Values.grafana.dashboards.enabled }}
+{{- range $path, $bytes := .Files.Glob "grafana_dashboards/languagetool/*.json" }}
 ---
 apiVersion: v1
 kind: ConfigMap
