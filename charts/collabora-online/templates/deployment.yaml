@@ -1,5 +1,4 @@
 {{- if eq .Values.deployment.kind "Deployment" -}}
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -7,7 +6,6 @@ metadata:
   labels:
     {{- include "collabora-online.labels" . | nindent 4 }}
 spec:
-  terminationGracePeriodSeconds: {{ .Values.terminationGracePeriodSeconds }}
   minReadySeconds: {{ .Values.deployment.minReadySeconds }}
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
@@ -35,6 +33,11 @@ spec:
         {{- include "collabora-online.selectorLabels" . | nindent 8 }}
         type: main
     spec:
+      {{- with .Values.deployment.hostAliases }}
+      hostAliases:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      terminationGracePeriodSeconds: {{ .Values.terminationGracePeriodSeconds }}
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
